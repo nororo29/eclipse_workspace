@@ -10,16 +10,38 @@ public class PrintPrime {
 
 		System.out.print("숫자 입력 : ");
 		int n = sc.nextInt();
-
-		for (int i = 0; i <= n; i++) {
-			if (i % 2 == 0 || i % 3 == 0)
-				continue;
-			for (int j = 5; j <= i / j; j += 2) {
-				if (i % j == 0)
-					break;
-			}
-			System.out.print(i + " ");
+		
+		
+		if (n < 2) {
+			sc.close();
+			return;
 		}
+		if (n == 2) {
+			System.out.print(n);
+			sc.close();
+			return;
+		}
+		
+		System.out.print("2 3 ");
+		for (int i = 2; i <= n; i++) {
+			boolean isPrime = true;
+			
+			if (i % 2 == 0 || i % 3 == 0) {
+				isPrime = false;
+				continue;
+			}
+			
+			for (int j = 5; j <= i / j; j+=2) {
+				if (i % j == 0) {
+					isPrime = false;
+					break;
+				}
+			}
+			
+			if (isPrime == true)
+				System.out.print(i + " ");
+		}
+		
 
 		sc.close();
 	}
