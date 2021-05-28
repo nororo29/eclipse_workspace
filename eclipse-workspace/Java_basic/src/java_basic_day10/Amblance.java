@@ -33,5 +33,10 @@ public class Amblance extends Car {
 		Amblance a2 = new Amblance();
 		a2.run();
 		a2.siren();
+		a2.carName = "abc";
+		a2.run();
+		a2.engine = 200;
+		System.out.println(a2.engine);
+		
 	}
 }

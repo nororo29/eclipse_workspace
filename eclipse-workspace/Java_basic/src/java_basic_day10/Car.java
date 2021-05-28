@@ -2,7 +2,7 @@ package java_basic_day10;
 
 public class Car {
 	protected String carName;
-	protected int engine;
+	int engine;
 	
 	public Car() {
 		this("이름없음", -1);
