@@ -8,7 +8,7 @@ class Employee {
 		System.out.println("Employee" + eno + " 생성");
 	}
 	
-	@Override
+	@Override  // 소멸자
 	protected void finalize() throws Throwable {  // 가비지컬랙션
 		System.out.println("Employee" + eno + " 삭제");
 	}
