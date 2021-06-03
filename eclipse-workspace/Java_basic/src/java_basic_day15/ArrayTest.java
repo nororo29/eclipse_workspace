@@ -23,6 +23,17 @@ public class ArrayTest {
 		System.out.println();
 		for (int i : nums2)
 			System.out.print(i + " ");
+		
+		System.out.println();
+		
+		nums2 = nums1;
+		for (int s : nums2) {
+			System.out.print(s + " ");	
+		}
+		
+		System.out.println();
+		System.out.println(nums1);
+		System.out.println(nums2);
 
 		System.out.println();
 		String[] strs1 = {"a", "b", "c"};
@@ -40,6 +51,17 @@ public class ArrayTest {
 		for (String s : strs2) {
 			System.out.print(s + " ");	
 		}
+		
+		System.out.println();
+		
+		strs2 = strs1;
+		for (String s : strs2) {
+			System.out.print(s + " ");	
+		}
+		
+		System.out.println();
+		System.out.println(strs1);
+		System.out.println(strs2);
 	}
 
 }
